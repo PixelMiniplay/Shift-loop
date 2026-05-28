@@ -1,0 +1,6 @@
+{
+  "name": "Shift Loop",
+  "description": "A cozy, light-themed kinetic puzzle game. Rotate trails, align cores, match patterns, and enjoy a comfortable, friendly loop matching puzzle experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

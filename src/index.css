@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Cyber Ambient Visual Styles */
+.text-glow {
+  text-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
+}
+
+.text-glow-pink {
+  text-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+}
+
+.neon-border-glow {
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+}

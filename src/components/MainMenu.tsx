@@ -198,7 +198,7 @@ export default function MainMenu({
         <div id="subview-trophies" className="flex-1 w-full max-w-md flex flex-col py-4 text-left">
           <div className="mb-4">
             <h2 className="text-xl font-extrabold text-white flex items-center gap-1.5">
-              SECTOR <span className="text-sky-450">ACHIEVEMENTS</span>
+              SECTOR <span className="text-sky-400">ACHIEVEMENTS</span>
             </h2>
             <p className="text-[10px] font-mono font-bold text-zinc-400 uppercase tracking-widest mt-0.5">
               Earn persistent rewards along your journey
@@ -347,7 +347,7 @@ export default function MainMenu({
             onClick={() => handleTabChange(activeTab === "trophies" ? "menu" : "trophies")}
             className={`py-3.5 rounded-2xl border flex flex-col items-center justify-center gap-1.5 transition-all text-[10px] font-extrabold uppercase tracking-widest font-mono relative cursor-pointer ${
               activeTab === "trophies" 
-                ? "bg-sky-950/40 border-sky-500/50 text-sky-450 shadow-lg" 
+                      ? "bg-sky-950/40 border-sky-500/50 text-sky-400 shadow-lg" 
                 : "bg-[#11131c] border-[#1a1c27] text-zinc-400 hover:text-white hover:bg-zinc-900/50"
             }`}
           >
@@ -365,7 +365,7 @@ export default function MainMenu({
               gameAudio.triggerSFX("click");
               onOpenShop();
             }}
-            className="py-3.5 bg-[#11131c] border border-zinc-850 hover:border-sky-500/50 text-zinc-450 hover:text-sky-400 rounded-2xl flex flex-col items-center justify-center gap-1.5 transition-all text-[10px] font-extrabold uppercase tracking-widest font-mono cursor-pointer shadow-lg"
+            className="py-3.5 bg-[#11131c] border border-zinc-850 hover:border-sky-500/50 text-zinc-400 hover:text-sky-400 rounded-2xl flex flex-col items-center justify-center gap-1.5 transition-all text-[10px] font-extrabold uppercase tracking-widest font-mono cursor-pointer shadow-lg"
           >
             <ShoppingCart size={16} />
             <span>SHOP MARKET</span>

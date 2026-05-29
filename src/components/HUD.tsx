@@ -115,7 +115,7 @@ export default function HUD({
               })}
             </div>
 
-            <p className="text-[7.5px] font-mono font-bold text-zinc-405 tracking-wider max-w-[110px] uppercase leading-tight text-center mt-0.5">
+            <p className="text-[7.5px] font-mono font-bold text-zinc-400 tracking-wider max-w-[110px] uppercase leading-tight text-center mt-0.5">
               {dimensionConfig.description}
             </p>
           </div>

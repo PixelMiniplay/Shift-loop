@@ -81,7 +81,7 @@ export default function Shop({
         </div>
 
         {/* Currency badge */}
-        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-amber-955/20 border border-amber-900/30 shadow-lg select-none">
+        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-amber-900/20 border border-amber-900/30 shadow-lg select-none">
           <Zap size={13} className="text-amber-400 fill-amber-300 animate-pulse" />
           <span className="text-xs font-black font-mono text-zinc-200">
             {totalCores} <span className="text-[9px] text-zinc-400 font-bold">CORES</span>
@@ -172,7 +172,7 @@ export default function Shop({
                       disabled={!canAfford}
                       className={`w-full py-2.5 rounded-xl font-mono text-[10px] font-extrabold tracking-wider uppercase flex items-center justify-center gap-1 transition-all ${
                         canAfford
-                          ? "bg-sky-500 hover:bg-sky-450 text-white cursor-pointer shadow-lg"
+                          ? "bg-sky-500 hover:bg-sky-600 text-white cursor-pointer shadow-lg"
                           : "bg-[#0f1019] border border-zinc-850 text-zinc-600 cursor-not-allowed"
                       }`}
                     >
@@ -251,7 +251,7 @@ export default function Shop({
                       disabled={!canAfford}
                       className={`w-full py-2.5 rounded-xl font-mono text-[10px] font-extrabold tracking-wider uppercase flex items-center justify-center gap-1 transition-all ${
                         canAfford
-                          ? "bg-fuchsia-500 hover:bg-fuchsia-450 text-white cursor-pointer shadow-lg"
+                          ? "bg-fuchsia-500 hover:bg-fuchsia-600 text-white cursor-pointer shadow-lg"
                           : "bg-[#0f1019] border border-zinc-850 text-zinc-600 cursor-not-allowed"
                       }`}
                     >

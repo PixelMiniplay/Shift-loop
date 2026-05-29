@@ -593,7 +593,7 @@ export default function GameBoard({
       p.life += 1;
       p.x += p.vx;
       p.y += p.vy;
-      p.alpha = 1.0 - (p.life / p.maxProgress);
+      p.alpha = 1.0 - (p.life / p.maxLife);
 
       // Dampen velocity to cluster around cube
       p.vx *= 0.96;

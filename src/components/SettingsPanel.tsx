@@ -90,7 +90,7 @@ export default function SettingsPanel({
             onChange={handleSfxChange}
             className="w-full h-1.5 accent-sky-400 bg-zinc-950 rounded-lg cursor-pointer mt-1"
           />
-          <span className="text-[8px] font-mono text-zinc-450 uppercase tracking-wider mt-1 font-bold">
+          <span className="text-[8px] font-mono text-zinc-400 uppercase tracking-wider mt-1 font-bold">
             Chimes, micro-glitches and feedback alerts
           </span>
         </div>
@@ -112,7 +112,7 @@ export default function SettingsPanel({
             onChange={handleMusChange}
             className="w-full h-1.5 accent-fuchsia-400 bg-zinc-950 rounded-lg cursor-pointer mt-1"
           />
-          <span className="text-[8px] font-mono text-zinc-450 uppercase tracking-wider mt-1 font-bold">
+          <span className="text-[8px] font-mono text-zinc-400 uppercase tracking-wider mt-1 font-bold">
             Generative driving bass beats and melody steps
           </span>
         </div>
@@ -156,7 +156,7 @@ export default function SettingsPanel({
 
         {/* System Diagnostics reset progress */}
         <div className="flex flex-col gap-2 p-4 bg-[#121422] border border-zinc-850/80 rounded-2xl shadow-lg">
-          <div className="flex justify-between items-center text-xs text-zinc-450">
+          <div className="flex justify-between items-center text-xs text-zinc-400">
             <span className="font-extrabold tracking-tight font-sans text-red-400 flex items-center gap-1.5 uppercase leading-none">
               <RefreshCw size={13} className="animate-spin" style={{ animationDuration: "8s" }} />
               SYSTEM RESET

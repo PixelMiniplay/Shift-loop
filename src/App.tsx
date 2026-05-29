@@ -102,7 +102,9 @@ const INITIAL_STATS: GameStats = {
   lifetimeCoresCollected: 0,
   totalGamesPlayed: 0,
   maxCombo: 0,
-  totalBrainRushesCleared: 0
+  totalBrainRushesCleared: 0,
+  totalTimePlayed: 0,
+  lastPlayedAt: 0
 };
 
 const DEFAULT_SKINS: PlayerSkin[] = [
@@ -163,9 +165,9 @@ export default function App() {
 
   // Daily Challenges list
   const [dailyChallenges, setDailyChallenges] = useState<DailyChallenge[]>([
-    { id: "day_score", description: "Earn 2,500 points in a single game", rewardCores: 30, targetCount: 2500, currentCount: 0, completed: false, claimed: false, type: "score_single" },
-    { id: "day_combo", description: "Achieve a 6x Combo perfect chain", rewardCores: 25, targetCount: 6, currentCount: 0, completed: false, claimed: false, type: "combo_limit" },
-    { id: "day_harvest", description: "Amass 35 total energy cores across loops", rewardCores: 40, targetCount: 35, currentCount: 0, completed: false, claimed: false, type: "cores_single" }
+    { id: "day_score", description: "Earn 2,500 points in a single game", rewardCores: 30, targetCount: 2500, currentCount: 0, completed: false, claimed: false, type: "score_single", expiresAt: 0 },
+    { id: "day_combo", description: "Achieve a 6x Combo perfect chain", rewardCores: 25, targetCount: 6, currentCount: 0, completed: false, claimed: false, type: "combo_limit", expiresAt: 0 },
+    { id: "day_harvest", description: "Amass 35 total energy cores across loops", rewardCores: 40, targetCount: 35, currentCount: 0, completed: false, claimed: false, type: "cores_single", expiresAt: 0 }
   ]);
 
   // Load state on startup
@@ -250,7 +252,9 @@ export default function App() {
       lifetimeCoresCollected: stats.lifetimeCoresCollected + coresGathered,
       totalGamesPlayed: stats.totalGamesPlayed + 1,
       maxCombo: Math.max(stats.maxCombo, maxCombo),
-      totalBrainRushesCleared: stats.totalBrainRushesCleared + brainRushesCleared
+      totalBrainRushesCleared: stats.totalBrainRushesCleared + brainRushesCleared,
+      totalTimePlayed: stats.totalTimePlayed + 0,
+      lastPlayedAt: Date.now()
     };
 
     setStats(nextStats);

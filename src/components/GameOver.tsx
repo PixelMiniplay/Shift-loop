@@ -77,7 +77,7 @@ export default function GameOver({
 
       {/* Main Score Block */}
       <div className="flex-1 flex flex-col items-center justify-center text-center gap-1 py-4">
-        <span className="text-[10px] font-mono text-zinc-450 uppercase tracking-widest font-extrabold">Final Score Accumulated</span>
+        <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest font-extrabold">Final Score Accumulated</span>
         <span id="game-over-score-text" className="text-5xl sm:text-6xl font-black font-mono text-white tracking-tight">
           {score.toLocaleString()}
         </span>
@@ -99,7 +99,7 @@ export default function GameOver({
 
           <div className="bg-[#121422] border border-zinc-850 p-3 rounded-2xl flex flex-col items-center gap-1 shadow-lg">
             <span className="text-[8px] font-mono text-zinc-400 uppercase tracking-widest font-extrabold text-center leading-tight">Brain Rushes</span>
-            <span className="font-mono font-black text-sky-450 text-sm">{brainRushesCleared}</span>
+            <span className="font-mono font-black text-sky-400 text-sm">{brainRushesCleared}</span>
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@ export default function GameOver({
                 Claim free extra cores for the gift shop!
               </p>
             </div>
-            <div className="px-2 py-0.5 bg-amber-955/20 text-amber-400 border border-amber-900/30 text-[9px] font-mono rounded-md font-extrabold">
+            <div className="px-2 py-0.5 bg-amber-900/20 text-amber-400 border border-amber-900/30 text-[9px] font-mono rounded-md font-extrabold">
               2X BONUS
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function GameOver({
           ) : (
             <button
               onClick={handleDoubleReward}
-              className="w-full py-2.5 bg-amber-550 hover:bg-amber-500 text-white font-extrabold uppercase font-mono tracking-widest text-[9px] rounded-2xl transition-all cursor-pointer flex items-center justify-center gap-1.5 shadow-md active:scale-[0.98]"
+              className="w-full py-2.5 bg-amber-500 hover:bg-amber-400 text-white font-extrabold uppercase font-mono tracking-widest text-[9px] rounded-2xl transition-all cursor-pointer flex items-center justify-center gap-1.5 shadow-md active:scale-[0.98]"
             >
               <Zap size={11} className="fill-white" />
               CLAIM DOUBLE (+{coresCollected} CORES)

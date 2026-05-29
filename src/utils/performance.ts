@@ -48,8 +48,13 @@ class PerformanceMonitor {
   }
 
   private getMemoryUsage(): number {
-    if (performance.memory) {
-      return Math.round((performance.memory as any).usedJSHeapSize / 1048576); // Convert to MB
+    try {
+      const perfMemory = (performance as any).memory;
+      if (perfMemory) {
+        return Math.round(perfMemory.usedJSHeapSize / 1048576); // Convert to MB
+      }
+    } catch (e) {
+      // performance.memory is not available in all environments
     }
     return 0;
   }

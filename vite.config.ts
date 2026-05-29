@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: 'Shift-loop',
+    base: '/Shift-loop/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

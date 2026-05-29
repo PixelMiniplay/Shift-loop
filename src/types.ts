@@ -12,6 +12,14 @@ export enum DimensionMode {
   TIME_FREEZE = "FREEZE"
 }
 
+export enum GameState {
+  MENU = "menu",
+  PLAYING = "playing",
+  PAUSED = "paused",
+  GAME_OVER = "gameover",
+  SETTINGS = "settings"
+}
+
 export interface DimensionConfig {
   id: DimensionMode;
   name: string;
@@ -22,7 +30,7 @@ export interface DimensionConfig {
   gravityFactor: number;
   speedMultiplier: number;
   description: string;
-  unlockedAt: number; // core cost or score milstone
+  unlockedAt: number;
 }
 
 export interface PlayerSkin {
@@ -54,6 +62,8 @@ export interface GameStats {
   totalGamesPlayed: number;
   maxCombo: number;
   totalBrainRushesCleared: number;
+  totalTimePlayed: number;
+  lastPlayedAt: number;
 }
 
 export interface Achievement {
@@ -65,7 +75,7 @@ export interface Achievement {
   maxProgress: number;
   completed: boolean;
   claimed: boolean;
-  type: "score" | "cores" | "combo" | "games" | "brainrush";
+  type: "score" | "cores" | "combo" | "games" | "brainrush" | "time";
 }
 
 export interface DailyChallenge {
@@ -77,25 +87,27 @@ export interface DailyChallenge {
   completed: boolean;
   claimed: boolean;
   type: "score_single" | "combo_limit" | "cores_single" | "survival_time";
+  expiresAt: number;
 }
 
 export interface ObstacleBarrier {
   id: string;
-  distance: number; // Distance in tunnel length units
+  distance: number;
   speed: number;
-  openGates: number[]; // Index 0-3 corresponding to tracks (0: Top/Up, 1: Right, 2: Bottom, 3: Left)
-  colorNodes?: string[]; // Lane-specific colors if matching required
+  openGates: number[];
+  colorNodes?: string[];
   passed: boolean;
-  angle: number; // Current rotation angle in radians for animations
+  angle: number;
   width: number;
 }
 
 export interface EnergyCoreItem {
   id: string;
   distance: number;
-  lane: number; // 0-3
+  lane: number;
   collected: boolean;
   pulseScale: number;
+  multiplier?: number;
 }
 
 export interface Particle {
@@ -108,5 +120,22 @@ export interface Particle {
   alpha: number;
   life: number;
   maxLife: number;
-  type?: "core" | "perfect" | "glitch" | "trail" | "matrix";
+  type?: "core" | "perfect" | "glitch" | "trail" | "matrix" | "explosion";
+}
+
+export interface GameSessionStats {
+  score: number;
+  coresCollected: number;
+  maxCombo: number;
+  brainRushesCleared: number;
+  isNewHigh: boolean;
+  timePlayed: number;
+  dimensionsSeen: DimensionMode[];
+}
+
+export interface PerformanceMetrics {
+  fps: number;
+  frameTime: number;
+  memoryUsage: number;
+  particleCount: number;
 }
